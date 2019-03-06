@@ -5,6 +5,7 @@ class Song {
   // Song object
   private $artist;
   private $title;
+  private $year;
   private $public_date;
   public $nickname;
 
@@ -28,6 +29,16 @@ class Song {
     return $this->title;
   }
 
+  function set_year($_year){
+    // Set title
+    $this->year = $_year;
+  }
+
+  function get_year(){
+    // Get title
+    return $this->year;
+  }
+
   function set_public_date($_pub_date){
     // Set public_date (publication date)
     $this->public_date = $_pub_date;
@@ -38,16 +49,16 @@ class Song {
     return $this->public_date;
   }
 
-  function create_song($_artist, $_title, $_public_date){
+  function create_song($_artist, $_title, $_year){
     // Create a song
     $this->artist = $_artist;
     $this->title = $_title;
-    $this->public_date = $_public_date;
+    $this->year = $_year;
   }
 
   function print_song_info(){
     // Prints song information (debugging)
-    echo $this->title . 'by ' . $this->artist;
+    echo $this->title . ' by ' . $this->artist;
   }
 
 }

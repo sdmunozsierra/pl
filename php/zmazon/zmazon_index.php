@@ -29,7 +29,7 @@
   <!-- ***** Header Area Start ***** -->
   <header class="header-area">
     <!-- Main Header Start -->
-    <div class="main-header-area">
+    <div class="main-header-area bg-img bg-overlay" style="background-image: url(img/bg-img/1.jpg);">
       <div class="classy-nav-container breakpoint-off">
         <!-- Classy Menu -->
         <nav class="classy-navbar justify-content-between" id="pocaNav">
@@ -77,15 +77,13 @@
     print $message;
     // Inclide songs from zmazon.php
     require('zmazon.php');
-    $song1->print_song_info();
-
     ?>
-    <?= $song1->print_song_info(); $daftpunk1->print_song_info()?>
+    <?= $daftpunk1->print_song_info()?>
   </section>
   <!-- ***** END PHP ***** -->
 
   <!-- ***** Latest Episodes Area Start ***** -->
-  <section class="poca-latest-epiosodes section-padding-80">
+  <section class="poca-latest-epiosodes section-padding-80 ">
     <div class="container">
       <div class="row">
         <!-- Section Heading -->
@@ -111,10 +109,10 @@
               <img src="./img/bg-img/5.jpg" alt="">
             </div>
             <div class="poca-music-content text-center">
-              <span class="music-published-date mb-2"><?= $daftpunk1->get_public_date(); ?></span>
-              <h2><?=$daftpunk1->get_title?></h2>
+              <span class="music-published-date mb-2"><?= $daftpunk1->get_year(); ?></span>
+              <h2><?=$daftpunk1->get_title(); ?></h2>
               <div class="music-meta-data">
-                <p>By <a href="#" class="music-author"><?= $daftpunk1->get_artist(); ?></a> <a href="#" class="music-duration">04:51</a></p>
+                <p>By <a href="#" class="music-author"><?= $daftpunk1->get_artist(); ?></a><a href="#" class="music-duration">04:51</a></p>
               </div>
               <!-- Music Player -->
               <div class="poca-music-player">
@@ -124,7 +122,7 @@
               </div>
               <!-- Buy -->
               <div class="align-items-center">
-                <a href="#"><i class="fas fa-heart" aria-hidden="true"></i>BUY</a>
+                <button type="submit" class="btn"><?= $user1->add_to_purchased_songs($daftpunk1); ?>BUY</button>
               </div>
             </div>
           </div>
@@ -138,10 +136,10 @@
               <img src="./img/bg-img/6.jpg" alt="">
             </div>
             <div class="poca-music-content text-center">
-              <span class="music-published-date mb-2">December 9, 2018</span>
-              <h2>Episode 202 - I Want A New Judge!</h2>
+              <span class="music-published-date mb-2"><?= $daftpunk2->get_year(); ?></span>
+              <h2><?= $daftpunk2->get_title(); ?></h2>
               <div class="music-meta-data">
-                <p>By <a href="#" class="music-author">Admin</a> | <a href="#" class="music-catagory">Tutorials</a> | <a href="#" class="music-duration">00:02:56</a></p>
+                <p>By <a href="#" class="music-author"> <?= $daftpunk2->get_artist(); ?></a> <a href="#" class="music-duration">00:02:56</a></p>
               </div>
               <!-- Music Player -->
               <div class="poca-music-player">
@@ -149,30 +147,26 @@
                   <source src="audio/dummy-audio.mp3">
                 </audio>
               </div>
-              <!-- Likes, Share & Download -->
-              <div class="likes-share-download d-flex align-items-center justify-content-between">
-                <a href="#"><i class="fa fa-heart" aria-hidden="true"></i> Like (29)</a>
-                <div>
-                  <a href="#" class="mr-4"><i class="fa fa-share-alt" aria-hidden="true"></i> Share(04)</a>
-                  <a href="#"><i class="fa fa-download" aria-hidden="true"></i> Download (12)</a>
-                </div>
+              <!-- Buy -->
+              <div class="align-items-center">
+                <a href="#"><i class="fa fa-heart" aria-hidden="true"></i>BUY</a>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Single gallery Item -->
-        <div class="col-12 col-md-6 single_gallery_item media wow fadeInUp" data-wow-delay="0.2s">
+        <div class="col-12 col-md-6 single_gallery_item entre tutor wow fadeInUp" data-wow-delay="0.2s">
           <!-- Welcome Music Area -->
           <div class="poca-music-area style-2 d-flex align-items-center flex-wrap">
             <div class="poca-music-thumbnail">
-              <img src="./img/bg-img/7.jpg" alt="">
+              <img src="./img/bg-img/6.jpg" alt="">
             </div>
             <div class="poca-music-content text-center">
-              <span class="music-published-date mb-2">December 9, 2018</span>
-              <h2>Episode 203 - The Last Blockbuster</h2>
+              <span class="music-published-date mb-2"><?= $modjo->get_year(); ?></span>
+              <h2><?= $modjo->get_title(); ?></h2>
               <div class="music-meta-data">
-                <p>By <a href="#" class="music-author">Admin</a> | <a href="#" class="music-catagory">Tutorials</a> | <a href="#" class="music-duration">00:02:56</a></p>
+                <p>By <a href="#" class="music-author"> <?= $modjo->get_artist(); ?></a> <a href="#" class="music-duration">00:02:56</a></p>
               </div>
               <!-- Music Player -->
               <div class="poca-music-player">
@@ -180,30 +174,26 @@
                   <source src="audio/dummy-audio.mp3">
                 </audio>
               </div>
-              <!-- Likes, Share & Download -->
-              <div class="likes-share-download d-flex align-items-center justify-content-between">
-                <a href="#"><i class="fa fa-heart" aria-hidden="true"></i> Like (29)</a>
-                <div>
-                  <a href="#" class="mr-4"><i class="fa fa-share-alt" aria-hidden="true"></i> Share(04)</a>
-                  <a href="#"><i class="fa fa-download" aria-hidden="true"></i> Download (12)</a>
-                </div>
+              <!-- Buy -->
+              <div class="align-items-center">
+                <a href="#"><i class="fa fa-heart" aria-hidden="true"></i>BUY</a>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Single gallery Item -->
-        <div class="col-12 col-md-6 single_gallery_item media wow fadeInUp" data-wow-delay="0.2s">
+        <div class="col-12 col-md-6 single_gallery_item entre tutor wow fadeInUp" data-wow-delay="0.2s">
           <!-- Welcome Music Area -->
           <div class="poca-music-area style-2 d-flex align-items-center flex-wrap">
             <div class="poca-music-thumbnail">
-              <img src="./img/bg-img/8.jpg" alt="">
+              <img src="./img/bg-img/6.jpg" alt="">
             </div>
             <div class="poca-music-content text-center">
-              <span class="music-published-date mb-2">December 9, 2018</span>
-              <h2>Episode 204 - The Last Blockbuster</h2>
+              <span class="music-published-date mb-2"><?= $cassius->get_year(); ?></span>
+              <h2><?= $cassius->get_title(); ?></h2>
               <div class="music-meta-data">
-                <p>By <a href="#" class="music-author">Admin</a> | <a href="#" class="music-catagory">Tutorials</a> | <a href="#" class="music-duration">00:02:56</a></p>
+                <p>By <a href="#" class="music-author"> <?= $cassius->get_artist(); ?></a> <a href="#" class="music-duration">00:02:56</a></p>
               </div>
               <!-- Music Player -->
               <div class="poca-music-player">
@@ -211,30 +201,26 @@
                   <source src="audio/dummy-audio.mp3">
                 </audio>
               </div>
-              <!-- Likes, Share & Download -->
-              <div class="likes-share-download d-flex align-items-center justify-content-between">
-                <a href="#"><i class="fa fa-heart" aria-hidden="true"></i> Like (29)</a>
-                <div>
-                  <a href="#" class="mr-4"><i class="fa fa-share-alt" aria-hidden="true"></i> Share(04)</a>
-                  <a href="#"><i class="fa fa-download" aria-hidden="true"></i> Download (12)</a>
-                </div>
+              <!-- Buy -->
+              <div class="align-items-center">
+                <a href="#"><i class="fa fa-heart" aria-hidden="true"></i>BUY</a>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Single gallery Item -->
-        <div class="col-12 col-md-6 single_gallery_item tech tutor wow fadeInUp" data-wow-delay="0.2s">
+        <div class="col-12 col-md-6 single_gallery_item entre tutor wow fadeInUp" data-wow-delay="0.2s">
           <!-- Welcome Music Area -->
           <div class="poca-music-area style-2 d-flex align-items-center flex-wrap">
             <div class="poca-music-thumbnail">
-              <img src="./img/bg-img/9.jpg" alt="">
+              <img src="./img/bg-img/6.jpg" alt="">
             </div>
             <div class="poca-music-content text-center">
-              <span class="music-published-date mb-2">December 9, 2018</span>
-              <h2>Episode 205 - See Ya In Three!</h2>
+              <span class="music-published-date mb-2"><?= $club_soda->get_year(); ?></span>
+              <h2><?= $club_soda->get_title(); ?></h2>
               <div class="music-meta-data">
-                <p>By <a href="#" class="music-author">Admin</a> | <a href="#" class="music-catagory">Tutorials</a> | <a href="#" class="music-duration">00:02:56</a></p>
+                <p>By <a href="#" class="music-author"> <?= $club_soda->get_artist(); ?></a> <a href="#" class="music-duration">00:02:56</a></p>
               </div>
               <!-- Music Player -->
               <div class="poca-music-player">
@@ -242,30 +228,26 @@
                   <source src="audio/dummy-audio.mp3">
                 </audio>
               </div>
-              <!-- Likes, Share & Download -->
-              <div class="likes-share-download d-flex align-items-center justify-content-between">
-                <a href="#"><i class="fa fa-heart" aria-hidden="true"></i> Like (29)</a>
-                <div>
-                  <a href="#" class="mr-4"><i class="fa fa-share-alt" aria-hidden="true"></i> Share(04)</a>
-                  <a href="#"><i class="fa fa-download" aria-hidden="true"></i> Download (12)</a>
-                </div>
+              <!-- Buy -->
+              <div class="align-items-center">
+                <a href="#"><i class="fa fa-heart" aria-hidden="true"></i>BUY</a>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Single gallery Item -->
-        <div class="col-12 col-md-6 single_gallery_item tech wow fadeInUp" data-wow-delay="0.2s">
+        <div class="col-12 col-md-6 single_gallery_item entre tutor wow fadeInUp" data-wow-delay="0.2s">
           <!-- Welcome Music Area -->
           <div class="poca-music-area style-2 d-flex align-items-center flex-wrap">
             <div class="poca-music-thumbnail">
-              <img src="./img/bg-img/10.jpg" alt="">
+              <img src="./img/bg-img/6.jpg" alt="">
             </div>
             <div class="poca-music-content text-center">
-              <span class="music-published-date mb-2">December 9, 2018</span>
-              <h2>Episode 206 - Let’s Get This Party Started!</h2>
+              <span class="music-published-date mb-2"><?= $ryskee->get_year(); ?></span>
+              <h2><?= $ryskee->get_title(); ?></h2>
               <div class="music-meta-data">
-                <p>By <a href="#" class="music-author">Admin</a> | <a href="#" class="music-catagory">Tutorials</a> | <a href="#" class="music-duration">00:02:56</a></p>
+                <p>By <a href="#" class="music-author"> <?= $ryskee->get_artist(); ?></a> <a href="#" class="music-duration">00:02:56</a></p>
               </div>
               <!-- Music Player -->
               <div class="poca-music-player">
@@ -273,13 +255,36 @@
                   <source src="audio/dummy-audio.mp3">
                 </audio>
               </div>
-              <!-- Likes, Share & Download -->
-              <div class="likes-share-download d-flex align-items-center justify-content-between">
-                <a href="#"><i class="fa fa-heart" aria-hidden="true"></i> Like (29)</a>
-                <div>
-                  <a href="#" class="mr-4"><i class="fa fa-share-alt" aria-hidden="true"></i> Share(04)</a>
-                  <a href="#"><i class="fa fa-download" aria-hidden="true"></i> Download (12)</a>
-                </div>
+              <!-- Buy -->
+              <div class="align-items-center">
+                <a href="#"><i class="fa fa-heart" aria-hidden="true"></i>BUY</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Single gallery Item -->
+        <div class="col-12 col-md-6 single_gallery_item entre tutor wow fadeInUp" data-wow-delay="0.2s">
+          <!-- Welcome Music Area -->
+          <div class="poca-music-area style-2 d-flex align-items-center flex-wrap">
+            <div class="poca-music-thumbnail">
+              <img src="./img/bg-img/6.jpg" alt="">
+            </div>
+            <div class="poca-music-content text-center">
+              <span class="music-published-date mb-2"><?= $discopolis->get_year(); ?></span>
+              <h2><?= $discopolis->get_title(); ?></h2>
+              <div class="music-meta-data">
+                <p>By <a href="#" class="music-author"> <?= $discopolis->get_artist(); ?></a> <a href="#" class="music-duration">00:02:56</a></p>
+              </div>
+              <!-- Music Player -->
+              <div class="poca-music-player">
+                <audio preload="auto" controls>
+                  <source src="audio/dummy-audio.mp3">
+                </audio>
+              </div>
+              <!-- Buy -->
+              <div class="align-items-center">
+                <button type="submit" class="btn">BUY</button>
               </div>
             </div>
           </div>
@@ -288,15 +293,8 @@
       </div>
     </div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-12 text-center">
-          <a href="#" class="btn poca-btn mt-70">Load More</a>
-        </div>
-      </div>
-    </div>
   </section>
-  <!-- ***** Latest Episodes Area End ***** -->
+  <!-- ***** End Songs ***** -->
 
   <!-- ******* All JS ******* -->
   <!-- jQuery js -->
