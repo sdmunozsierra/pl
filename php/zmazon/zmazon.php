@@ -16,11 +16,11 @@ $library->add_song('Thomas Bangalter', 'Club Soda (A1)', '2001');
 $library->add_song('Ryskee', 'Holy Ghostz', '2000');
 $library->add_song('Kris Menace', 'Discopolis', '2009');
 
-$library->print_songs();  // prints songs in library
-
-print 'Requesting song info by id 1';
-$requested_song = $library->get_song_by_id(1);
-$requested_song->print_song_info();
+// $library->print_songs();  // prints songs in library
+//
+// print 'Requesting song info by id 1';
+// $requested_song = $library->get_song_by_id(1);
+// $requested_song->print_song_info();
 
 function handle_request($library, $request_id, $user){
   // Handles a request id
