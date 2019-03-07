@@ -78,7 +78,27 @@
     // Inclide songs from zmazon.php
     require('zmazon.php');
     ?>
-    <?= $daftpunk1->print_song_info()?>
+
+    <?php
+    $arr = $_REQUEST;
+    foreach ($arr as $key => $value) {
+      echo 'request value-> ' . $key;
+      handle_request($library, $key, $user1);
+    }
+    // break the reference with the last element
+    unset($value);
+
+    // Buy a song logic
+    // if(isset($_REQUEST['1'])){
+    //   $user1->add_to_purchased_songs($daftpunk1);
+    // }
+    // if(isset($_REQUEST['2'])){
+    //   $user1->add_to_purchased_songs($daftpunk2);
+    // }
+    // else{
+    //   print 'did not bought';
+    // }
+    ?>
   </section>
   <!-- ***** END PHP ***** -->
 
@@ -109,10 +129,10 @@
               <img src="./img/bg-img/5.jpg" alt="">
             </div>
             <div class="poca-music-content text-center">
-              <span class="music-published-date mb-2"><?= $daftpunk1->get_year(); ?></span>
-              <h2><?=$daftpunk1->get_title(); ?></h2>
+              <span class="music-published-date mb-2"><?= $library->get_song_by_id(0)->get_year(); ?></span>
+              <h2><?=$library->get_song_by_id(0)->get_title(); ?></h2>
               <div class="music-meta-data">
-                <p>By <a href="#" class="music-author"><?= $daftpunk1->get_artist(); ?></a><a href="#" class="music-duration">04:51</a></p>
+                <p>By <a href="#" class="music-author"><?= $library->get_song_by_id(0)->get_artist(); ?></a><a href="#" class="music-duration">04:51</a></p>
               </div>
               <!-- Music Player -->
               <div class="poca-music-player">
@@ -122,173 +142,59 @@
               </div>
               <!-- Buy -->
               <div class="align-items-center">
-                <button type="submit" class="btn"><?= $user1->add_to_purchased_songs($daftpunk1); ?>BUY</button>
+                <form method="post">
+                  <input type="submit" name="<?= $library->get_song_by_id(0)->id; ?>" value="BUY" class="btn"/>
+                </form>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Single gallery Item -->
-        <div class="col-12 col-md-6 single_gallery_item entre tutor wow fadeInUp" data-wow-delay="0.2s">
-          <!-- Welcome Music Area -->
-          <div class="poca-music-area style-2 d-flex align-items-center flex-wrap">
-            <div class="poca-music-thumbnail">
-              <img src="./img/bg-img/6.jpg" alt="">
-            </div>
-            <div class="poca-music-content text-center">
-              <span class="music-published-date mb-2"><?= $daftpunk2->get_year(); ?></span>
-              <h2><?= $daftpunk2->get_title(); ?></h2>
-              <div class="music-meta-data">
-                <p>By <a href="#" class="music-author"> <?= $daftpunk2->get_artist(); ?></a> <a href="#" class="music-duration">00:02:56</a></p>
-              </div>
-              <!-- Music Player -->
-              <div class="poca-music-player">
-                <audio preload="auto" controls>
-                  <source src="audio/dummy-audio.mp3">
-                </audio>
-              </div>
-              <!-- Buy -->
-              <div class="align-items-center">
-                <a href="#"><i class="fa fa-heart" aria-hidden="true"></i>BUY</a>
-              </div>
-            </div>
-          </div>
-        </div>
+        <?php
+        // Generate dinamically all songs in library
+        print 'Will generate songs:';
+        foreach ($library->songs as $song) {
+          print $song->print_song_info();
+          echo '
+          <!-- Single gallery Item -->
+          <div class="col-12 col-md-6 single_gallery_item entre tutor wow fadeInUp" data-wow-delay="0.2s">
+            <!-- Welcome Music Area -->
+            <div class="poca-music-area style-2 d-flex align-items-center flex-wrap">
+              <div class="poca-music-thumbnail">
+                <img src="./img/bg-img/6.jpg" alt="">
+                </div>
+                <div class="poca-music-content text-center">
+                <span class="music-published-date mb-2">';
+          echo $song->get_year();
+          echo '</span>
+                <h2>';
+          echo $song->get_title();
+          echo '</h2>
+                <div class="music-meta-data">
+                  <p>By <a href="#" class="music-author">';
+          echo $song->get_artist();
+          echo '</a> <a href="#" class="music-duration">00:02:56</a></p>
+                  </div>
+                  <!-- Music Player -->
+                  <div class="poca-music-player">
+                  <audio preload="auto" controls>
+                    <source src="audio/dummy-audio.mp3">
+                  </audio>
+                  </div>
+                  <!-- Buy -->
+                  <div class="align-items-center">
+                    <form method="post">
+                      <input type="submit" name="';
+          echo $song->id;
+          echo '" value="BUY" class="btn"/>
+                    </form>
+                  </div>
+                </div>
+                </div>
+                </div>';
+        }
 
-        <!-- Single gallery Item -->
-        <div class="col-12 col-md-6 single_gallery_item entre tutor wow fadeInUp" data-wow-delay="0.2s">
-          <!-- Welcome Music Area -->
-          <div class="poca-music-area style-2 d-flex align-items-center flex-wrap">
-            <div class="poca-music-thumbnail">
-              <img src="./img/bg-img/6.jpg" alt="">
-            </div>
-            <div class="poca-music-content text-center">
-              <span class="music-published-date mb-2"><?= $modjo->get_year(); ?></span>
-              <h2><?= $modjo->get_title(); ?></h2>
-              <div class="music-meta-data">
-                <p>By <a href="#" class="music-author"> <?= $modjo->get_artist(); ?></a> <a href="#" class="music-duration">00:02:56</a></p>
-              </div>
-              <!-- Music Player -->
-              <div class="poca-music-player">
-                <audio preload="auto" controls>
-                  <source src="audio/dummy-audio.mp3">
-                </audio>
-              </div>
-              <!-- Buy -->
-              <div class="align-items-center">
-                <a href="#"><i class="fa fa-heart" aria-hidden="true"></i>BUY</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Single gallery Item -->
-        <div class="col-12 col-md-6 single_gallery_item entre tutor wow fadeInUp" data-wow-delay="0.2s">
-          <!-- Welcome Music Area -->
-          <div class="poca-music-area style-2 d-flex align-items-center flex-wrap">
-            <div class="poca-music-thumbnail">
-              <img src="./img/bg-img/6.jpg" alt="">
-            </div>
-            <div class="poca-music-content text-center">
-              <span class="music-published-date mb-2"><?= $cassius->get_year(); ?></span>
-              <h2><?= $cassius->get_title(); ?></h2>
-              <div class="music-meta-data">
-                <p>By <a href="#" class="music-author"> <?= $cassius->get_artist(); ?></a> <a href="#" class="music-duration">00:02:56</a></p>
-              </div>
-              <!-- Music Player -->
-              <div class="poca-music-player">
-                <audio preload="auto" controls>
-                  <source src="audio/dummy-audio.mp3">
-                </audio>
-              </div>
-              <!-- Buy -->
-              <div class="align-items-center">
-                <a href="#"><i class="fa fa-heart" aria-hidden="true"></i>BUY</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Single gallery Item -->
-        <div class="col-12 col-md-6 single_gallery_item entre tutor wow fadeInUp" data-wow-delay="0.2s">
-          <!-- Welcome Music Area -->
-          <div class="poca-music-area style-2 d-flex align-items-center flex-wrap">
-            <div class="poca-music-thumbnail">
-              <img src="./img/bg-img/6.jpg" alt="">
-            </div>
-            <div class="poca-music-content text-center">
-              <span class="music-published-date mb-2"><?= $club_soda->get_year(); ?></span>
-              <h2><?= $club_soda->get_title(); ?></h2>
-              <div class="music-meta-data">
-                <p>By <a href="#" class="music-author"> <?= $club_soda->get_artist(); ?></a> <a href="#" class="music-duration">00:02:56</a></p>
-              </div>
-              <!-- Music Player -->
-              <div class="poca-music-player">
-                <audio preload="auto" controls>
-                  <source src="audio/dummy-audio.mp3">
-                </audio>
-              </div>
-              <!-- Buy -->
-              <div class="align-items-center">
-                <a href="#"><i class="fa fa-heart" aria-hidden="true"></i>BUY</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Single gallery Item -->
-        <div class="col-12 col-md-6 single_gallery_item entre tutor wow fadeInUp" data-wow-delay="0.2s">
-          <!-- Welcome Music Area -->
-          <div class="poca-music-area style-2 d-flex align-items-center flex-wrap">
-            <div class="poca-music-thumbnail">
-              <img src="./img/bg-img/6.jpg" alt="">
-            </div>
-            <div class="poca-music-content text-center">
-              <span class="music-published-date mb-2"><?= $ryskee->get_year(); ?></span>
-              <h2><?= $ryskee->get_title(); ?></h2>
-              <div class="music-meta-data">
-                <p>By <a href="#" class="music-author"> <?= $ryskee->get_artist(); ?></a> <a href="#" class="music-duration">00:02:56</a></p>
-              </div>
-              <!-- Music Player -->
-              <div class="poca-music-player">
-                <audio preload="auto" controls>
-                  <source src="audio/dummy-audio.mp3">
-                </audio>
-              </div>
-              <!-- Buy -->
-              <div class="align-items-center">
-                <a href="#"><i class="fa fa-heart" aria-hidden="true"></i>BUY</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Single gallery Item -->
-        <div class="col-12 col-md-6 single_gallery_item entre tutor wow fadeInUp" data-wow-delay="0.2s">
-          <!-- Welcome Music Area -->
-          <div class="poca-music-area style-2 d-flex align-items-center flex-wrap">
-            <div class="poca-music-thumbnail">
-              <img src="./img/bg-img/6.jpg" alt="">
-            </div>
-            <div class="poca-music-content text-center">
-              <span class="music-published-date mb-2"><?= $discopolis->get_year(); ?></span>
-              <h2><?= $discopolis->get_title(); ?></h2>
-              <div class="music-meta-data">
-                <p>By <a href="#" class="music-author"> <?= $discopolis->get_artist(); ?></a> <a href="#" class="music-duration">00:02:56</a></p>
-              </div>
-              <!-- Music Player -->
-              <div class="poca-music-player">
-                <audio preload="auto" controls>
-                  <source src="audio/dummy-audio.mp3">
-                </audio>
-              </div>
-              <!-- Buy -->
-              <div class="align-items-center">
-                <button type="submit" class="btn">BUY</button>
-              </div>
-            </div>
-          </div>
-        </div>
+        ?>
 
       </div>
     </div>

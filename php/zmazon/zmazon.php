@@ -4,29 +4,28 @@
 require('../song.php');
 require('../user.php');
 
-// Create Songs
-// French House
-$daftpunk1 = new Song;
-$daftpunk1->create_song('Daft Punk', 'Face To Face', '2003');
-
-$daftpunk2 = new Song;
-$daftpunk2->create_song('Daft Punk', 'One More Time', '2001');
-
-$modjo = new Song;
-$modjo->create_song('Modjo', 'Lady (Hear Me Tonight)', '2001');
-
-$cassius = new Song;
-$cassius->create_song('Cassius', 'Cassius 1999', '1999');
-
-$club_soda = new Song;
-$club_soda->create_song('Thomas Bangalter', 'Club Soda (A1)', '2001');
-
-$ryskee = new Song;
-$ryskee->create_song('Ryskee', 'Holy Ghostz', '2000');
-
-$discopolis = new Song;
-$discopolis->create_song('Kris Menace', 'Discopolis', '2009');
-
 $user1 = new User;
+
+$library = new Library();
+// French House
+$library->add_song('Daft Punk', 'Face To Face', '2003');
+$library->add_song('Daft Punk', 'One More Time', '2001');
+$library->add_song('Modjo', 'Lady (Hear Me Tonight)', '2001');
+$library->add_song('Cassius', 'Cassius 1999', '1999');
+$library->add_song('Thomas Bangalter', 'Club Soda (A1)', '2001');
+$library->add_song('Ryskee', 'Holy Ghostz', '2000');
+$library->add_song('Kris Menace', 'Discopolis', '2009');
+
+$library->print_songs();  // prints songs in library
+
+print 'Requesting song info by id 1';
+$requested_song = $library->get_song_by_id(1);
+$requested_song->print_song_info();
+
+function handle_request($library, $request_id, $user){
+  // Handles a request id
+  $song = $library->get_song_by_id($request_id);
+  $user->add_to_purchased_songs($song);
+}
 
 ?>

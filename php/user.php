@@ -10,10 +10,8 @@ class User{
   function is_purchased($song){
     // Check if song is purchased
     if (in_array($song, $this->purchased_songs)){
-       echo $song->print_song_info() . 'is already purchased';
        return True;
     }
-    echo '</br>' . $song->print_song_info() . 'is not purchased' . '</br>';
     return False;
   }
 
@@ -21,9 +19,11 @@ class User{
     // Add a song to purchased
     echo 'Adding song to purchased songs...';
     if ($this->is_purchased($song)){
+      echo $song->print_song_info() . 'is already purchased';
       return False;
     }
     array_push($this->purchased_songs, $song);
+    echo '</br>' . $song->print_song_info() . 'added to purchases' . '</br>';
     return True;
   }
 
