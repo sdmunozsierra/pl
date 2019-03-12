@@ -1,0 +1,8 @@
+{
+"user1":{
+"playlist1":{{"1": "song_a"}, {"2": "song_b"}, {"3": "song_c"} },
+
+"user2":{
+"playlist1":{{"1": "song_a"}, {"2": "song_b"}, {"3": "song_c"} },
+"playlist2":{{"1": "song_a"}, {"2": "song_b"}, {"3": "song_c"} }}
+}

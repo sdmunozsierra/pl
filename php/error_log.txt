@@ -1,0 +1,81 @@
+Found 4 users in file.Found 4 users in file.Found 4 users in file.Array
+(
+    [0] => USER_JSON Object
+        (
+            [uname] => user1
+            [pass] => pass
+        )
+
+    [1] => USER_JSON Object
+        (
+            [uname] => user2
+            [pass] => pass
+        )
+
+    [2] => USER_JSON Object
+        (
+            [uname] => user3
+            [pass] => pass
+        )
+
+    [3] => USER_JSON Object
+        (
+            [uname] => larry
+            [pass] => pass
+        )
+
+)
+Found 4 users in file.1Found 4 users in file.1Found 4 users in file.Array
+(
+    [0] => USER_JSON Object
+        (
+            [uname] => user1
+            [pass] => pass
+        )
+
+    [1] => USER_JSON Object
+        (
+            [uname] => user2
+            [pass] => pass
+        )
+
+    [2] => USER_JSON Object
+        (
+            [uname] => user3
+            [pass] => pass
+        )
+
+    [3] => USER_JSON Object
+        (
+            [uname] => larry
+            [pass] => pass
+        )
+
+)
+Found 4 users in file: storage/credentials.jsonArray
+(
+    [0] => USER_JSON Object
+        (
+            [uname] => user1
+            [pass] => pass
+        )
+
+    [1] => USER_JSON Object
+        (
+            [uname] => user2
+            [pass] => pass
+        )
+
+    [2] => USER_JSON Object
+        (
+            [uname] => user3
+            [pass] => pass
+        )
+
+    [3] => USER_JSON Object
+        (
+            [uname] => larry
+            [pass] => pass
+        )
+
+)
