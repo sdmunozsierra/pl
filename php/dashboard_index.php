@@ -15,10 +15,11 @@
 </head>
 
 <?php
-session_start();
+// session_start();  //started by session_management
+require_once 'main/session_management.php';
 
-$user_database = unserialize($_SESSION['usr_db']);
-if (!$user_database->get_current_user()) : ?>
+$current_user = $_SESSION['current_user'];
+if (!$current_user) : ?>
   <section class="hero is-success is-fullheight">
     <div class="hero-body">
       <div class="container has-text-centered">
@@ -87,7 +88,10 @@ if (!$user_database->get_current_user()) : ?>
     <section class="hero is-info is-bold">
         <div class="hero-body">
             <div class="container has-text-centered">
-                <h1 class="title"><?= print "welcome " . $user_database->get_current_user()->get_username(); ?></h1>
+                <h1 class="title">
+                  <?php $curr = get_current_user_from_session();
+                  print "Welcome " . $curr->username;?>
+              </h1>
             </div>
         </div>
     </section>
