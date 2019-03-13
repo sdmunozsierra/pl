@@ -1,10 +1,10 @@
 <?php
 // Create songs to be used in zmazon
 
-require('../song.php');
-require('../user.php');
+require '../song.php';
+require '../user.php';
 
-$user1 = new User;
+$userx = new User();
 
 $library = new Library();
 // French House
@@ -17,7 +17,7 @@ $library->add_song('Ryskee', 'Holy Ghostz', '2000');
 $library->add_song('Kris Menace', 'Discopolis', '2009');
 
 // $library->print_songs();  // prints songs in library
-//
+
 // print 'Requesting song info by id 1';
 // $requested_song = $library->get_song_by_id(1);
 // $requested_song->print_song_info();

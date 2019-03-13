@@ -53,8 +53,8 @@
             <!-- Nav Start -->
             <div class="classynav">
               <ul id="nav">
-                <li class="current-item"><a href="./zmazon_index.html">Home</a></li>
-                <li><a href="./zmazon_buy.html">BUY</a></li>
+                <li class="current-item"><a href="./zmazon_index.php">Home</a></li>
+                <li><a href="../dashboard/login.php">Log In</a></li>
               </ul>
 
             </div>
@@ -69,17 +69,18 @@
 
   <!-- ***** PHP ***** -->
   <section>
-    <h1>Will Create Some Songs</h1>
     <?php
     // Inclide songs from zmazon.php
-    require('zmazon.php');
+    session_start();
+    require_once 'zmazon.php';
+    require_once '../global.php';
     ?>
 
     <?php
     $arr = $_REQUEST;
     foreach ($arr as $key => $value) {
       echo 'request value-> ' . $key;
-      handle_request($library, $key, $user1);
+      handle_request($library, $key, $userx);
     }
     // break the reference with the last element
     unset($value);
