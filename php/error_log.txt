@@ -79,3 +79,1321 @@ Found 4 users in file: storage/credentials.jsonArray
         )
 
 )
+Found 4 users in file: storage/credentials.jsonArray
+(
+    [0] => USER_JSON Object
+        (
+            [uname] => user1
+            [pass] => pass
+        )
+
+    [1] => USER_JSON Object
+        (
+            [uname] => user2
+            [pass] => pass
+        )
+
+    [2] => USER_JSON Object
+        (
+            [uname] => user3
+            [pass] => pass
+        )
+
+    [3] => USER_JSON Object
+        (
+            [uname] => larry
+            [pass] => pass
+        )
+
+)
+Found 4 users in file: storage/credentials.jsonArray
+(
+    [0] => USER_JSON Object
+        (
+            [uname] => user1
+            [pass] => pass
+        )
+
+    [1] => USER_JSON Object
+        (
+            [uname] => user2
+            [pass] => pass
+        )
+
+    [2] => USER_JSON Object
+        (
+            [uname] => user3
+            [pass] => pass
+        )
+
+    [3] => USER_JSON Object
+        (
+            [uname] => larry
+            [pass] => pass
+        )
+
+)
+Found 4 users in file: storage/credentials.jsonArray
+(
+    [0] => JsonUser Object
+        (
+            [uname] => user1
+            [pass] => pass
+        )
+
+    [1] => JsonUser Object
+        (
+            [uname] => user2
+            [pass] => pass
+        )
+
+    [2] => JsonUser Object
+        (
+            [uname] => user3
+            [pass] => pass
+        )
+
+    [3] => JsonUser Object
+        (
+            [uname] => larry
+            [pass] => pass
+        )
+
+)
+Found 4 users in file: storage/credentials.jsonArray
+(
+    [0] => JsonUser Object
+        (
+            [uname] => user1
+            [pass] => pass
+        )
+
+    [1] => JsonUser Object
+        (
+            [uname] => user2
+            [pass] => pass
+        )
+
+    [2] => JsonUser Object
+        (
+            [uname] => user3
+            [pass] => pass
+        )
+
+    [3] => JsonUser Object
+        (
+            [uname] => larry
+            [pass] => pass
+        )
+
+)
+Found 4 users in file: storage/credentials.jsonArray
+(
+    [0] => JsonUser Object
+        (
+            [uname] => user1
+            [pass] => pass
+        )
+
+    [1] => JsonUser Object
+        (
+            [uname] => user2
+            [pass] => pass
+        )
+
+    [2] => JsonUser Object
+        (
+            [uname] => user3
+            [pass] => pass
+        )
+
+    [3] => JsonUser Object
+        (
+            [uname] => larry
+            [pass] => pass
+        )
+
+)
+Found 4 users in file: storage/credentials.jsonArray
+(
+    [0] => JsonUser Object
+        (
+            [uname] => user1
+            [pass] => pass
+        )
+
+    [1] => JsonUser Object
+        (
+            [uname] => user2
+            [pass] => pass
+        )
+
+    [2] => JsonUser Object
+        (
+            [uname] => user3
+            [pass] => pass
+        )
+
+    [3] => JsonUser Object
+        (
+            [uname] => larry
+            [pass] => pass
+        )
+
+)
+Found 4 users in file: storage/credentials.jsonArray
+(
+    [0] => JsonUser Object
+        (
+            [uname] => user1
+            [pass] => pass
+        )
+
+    [1] => JsonUser Object
+        (
+            [uname] => user2
+            [pass] => pass
+        )
+
+    [2] => JsonUser Object
+        (
+            [uname] => user3
+            [pass] => pass
+        )
+
+    [3] => JsonUser Object
+        (
+            [uname] => larry
+            [pass] => pass
+        )
+
+)
+Found 4 users in file: storage/credentials.jsonArray
+(
+    [0] => JsonUser Object
+        (
+            [uname] => user1
+            [pass] => pass
+        )
+
+    [1] => JsonUser Object
+        (
+            [uname] => user2
+            [pass] => pass
+        )
+
+    [2] => JsonUser Object
+        (
+            [uname] => user3
+            [pass] => pass
+        )
+
+    [3] => JsonUser Object
+        (
+            [uname] => larry
+            [pass] => pass
+        )
+
+)
+Found 4 users in file: storage/credentials.jsonArray
+(
+    [0] => JsonUser Object
+        (
+            [uname] => user1
+            [pass] => pass
+        )
+
+    [1] => JsonUser Object
+        (
+            [uname] => user2
+            [pass] => pass
+        )
+
+    [2] => JsonUser Object
+        (
+            [uname] => user3
+            [pass] => pass
+        )
+
+    [3] => JsonUser Object
+        (
+            [uname] => larry
+            [pass] => pass
+        )
+
+)
+Found 4 users in file: storage/credentials.jsonArray
+(
+    [0] => JsonUser Object
+        (
+            [uname] => user1
+            [pass] => pass
+        )
+
+    [1] => JsonUser Object
+        (
+            [uname] => user2
+            [pass] => pass
+        )
+
+    [2] => JsonUser Object
+        (
+            [uname] => user3
+            [pass] => pass
+        )
+
+    [3] => JsonUser Object
+        (
+            [uname] => larry
+            [pass] => pass
+        )
+
+)
+Found 4 users in file: storage/credentials.jsonArray
+(
+    [0] => JsonUser Object
+        (
+            [uname] => user1
+            [pass] => pass
+        )
+
+    [1] => JsonUser Object
+        (
+            [uname] => user2
+            [pass] => pass
+        )
+
+    [2] => JsonUser Object
+        (
+            [uname] => user3
+            [pass] => pass
+        )
+
+    [3] => JsonUser Object
+        (
+            [uname] => larry
+            [pass] => pass
+        )
+
+)
+Found 4 users in file: storage/credentials.jsonArray
+(
+    [0] => JsonUser Object
+        (
+            [uname] => user1
+            [pass] => pass
+        )
+
+    [1] => JsonUser Object
+        (
+            [uname] => user2
+            [pass] => pass
+        )
+
+    [2] => JsonUser Object
+        (
+            [uname] => user3
+            [pass] => pass
+        )
+
+    [3] => JsonUser Object
+        (
+            [uname] => larry
+            [pass] => pass
+        )
+
+)
+Found 4 users in file: storage/credentials.jsonArray
+(
+    [0] => JsonUser Object
+        (
+            [uname] => user1
+            [pass] => pass
+        )
+
+    [1] => JsonUser Object
+        (
+            [uname] => user2
+            [pass] => pass
+        )
+
+    [2] => JsonUser Object
+        (
+            [uname] => user3
+            [pass] => pass
+        )
+
+    [3] => JsonUser Object
+        (
+            [uname] => larry
+            [pass] => pass
+        )
+
+)
+Found 4 users in file: storage/credentials.jsonArray
+(
+    [0] => JsonUser Object
+        (
+            [uname] => user1
+            [pass] => pass
+        )
+
+    [1] => JsonUser Object
+        (
+            [uname] => user2
+            [pass] => pass
+        )
+
+    [2] => JsonUser Object
+        (
+            [uname] => user3
+            [pass] => pass
+        )
+
+    [3] => JsonUser Object
+        (
+            [uname] => larry
+            [pass] => pass
+        )
+
+)
+Found 4 users in file: storage/credentials.jsonArray
+(
+    [0] => JsonUser Object
+        (
+            [uname] => user1
+            [pass] => pass
+        )
+
+    [1] => JsonUser Object
+        (
+            [uname] => user2
+            [pass] => pass
+        )
+
+    [2] => JsonUser Object
+        (
+            [uname] => user3
+            [pass] => pass
+        )
+
+    [3] => JsonUser Object
+        (
+            [uname] => larry
+            [pass] => pass
+        )
+
+)
+Found 4 users in file: storage/credentials.jsonArray
+(
+    [0] => JsonUser Object
+        (
+            [uname] => user1
+            [pass] => pass
+        )
+
+    [1] => JsonUser Object
+        (
+            [uname] => user2
+            [pass] => pass
+        )
+
+    [2] => JsonUser Object
+        (
+            [uname] => user3
+            [pass] => pass
+        )
+
+    [3] => JsonUser Object
+        (
+            [uname] => larry
+            [pass] => pass
+        )
+
+)
+Found 4 users in file: storage/credentials.jsonArray
+(
+    [0] => JsonUser Object
+        (
+            [uname] => user1
+            [pass] => pass
+        )
+
+    [1] => JsonUser Object
+        (
+            [uname] => user2
+            [pass] => pass
+        )
+
+    [2] => JsonUser Object
+        (
+            [uname] => user3
+            [pass] => pass
+        )
+
+    [3] => JsonUser Object
+        (
+            [uname] => larry
+            [pass] => pass
+        )
+
+)
+Found 4 users in file: storage/credentials.jsonArray
+(
+    [0] => JsonUser Object
+        (
+            [uname] => user1
+            [pass] => pass
+        )
+
+    [1] => JsonUser Object
+        (
+            [uname] => user2
+            [pass] => pass
+        )
+
+    [2] => JsonUser Object
+        (
+            [uname] => user3
+            [pass] => pass
+        )
+
+    [3] => JsonUser Object
+        (
+            [uname] => larry
+            [pass] => pass
+        )
+
+)
+Found 4 users in file: storage/credentials.jsonArray
+(
+    [0] => JsonUser Object
+        (
+            [uname] => user1
+            [pass] => pass
+        )
+
+    [1] => JsonUser Object
+        (
+            [uname] => user2
+            [pass] => pass
+        )
+
+    [2] => JsonUser Object
+        (
+            [uname] => user3
+            [pass] => pass
+        )
+
+    [3] => JsonUser Object
+        (
+            [uname] => larry
+            [pass] => pass
+        )
+
+)
+Found 4 users in file: storage/credentials.jsonArray
+(
+    [0] => JsonUser Object
+        (
+            [uname] => user1
+            [pass] => pass
+        )
+
+    [1] => JsonUser Object
+        (
+            [uname] => user2
+            [pass] => pass
+        )
+
+    [2] => JsonUser Object
+        (
+            [uname] => user3
+            [pass] => pass
+        )
+
+    [3] => JsonUser Object
+        (
+            [uname] => larry
+            [pass] => pass
+        )
+
+)
+Found 4 users in file: storage/credentials.jsonArray
+(
+    [0] => JsonUser Object
+        (
+            [uname] => user1
+            [pass] => pass
+        )
+
+    [1] => JsonUser Object
+        (
+            [uname] => user2
+            [pass] => pass
+        )
+
+    [2] => JsonUser Object
+        (
+            [uname] => user3
+            [pass] => pass
+        )
+
+    [3] => JsonUser Object
+        (
+            [uname] => larry
+            [pass] => pass
+        )
+
+)
+Found 4 users in file: storage/credentials.jsonArray
+(
+    [0] => JsonUser Object
+        (
+            [uname] => user1
+            [pass] => pass
+        )
+
+    [1] => JsonUser Object
+        (
+            [uname] => user2
+            [pass] => pass
+        )
+
+    [2] => JsonUser Object
+        (
+            [uname] => user3
+            [pass] => pass
+        )
+
+    [3] => JsonUser Object
+        (
+            [uname] => larry
+            [pass] => pass
+        )
+
+)
+Found 4 users in file: storage/credentials.jsonArray
+(
+    [0] => JsonUser Object
+        (
+            [uname] => user1
+            [pass] => pass
+        )
+
+    [1] => JsonUser Object
+        (
+            [uname] => user2
+            [pass] => pass
+        )
+
+    [2] => JsonUser Object
+        (
+            [uname] => user3
+            [pass] => pass
+        )
+
+    [3] => JsonUser Object
+        (
+            [uname] => larry
+            [pass] => pass
+        )
+
+)
+Found 4 users in file: storage/credentials.jsonArray
+(
+    [0] => JsonUser Object
+        (
+            [uname] => user1
+            [pass] => pass
+        )
+
+    [1] => JsonUser Object
+        (
+            [uname] => user2
+            [pass] => pass
+        )
+
+    [2] => JsonUser Object
+        (
+            [uname] => user3
+            [pass] => pass
+        )
+
+    [3] => JsonUser Object
+        (
+            [uname] => larry
+            [pass] => pass
+        )
+
+)
+Found 4 users in file: storage/credentials.jsonArray
+(
+    [0] => JsonUser Object
+        (
+            [uname] => user1
+            [pass] => pass
+        )
+
+    [1] => JsonUser Object
+        (
+            [uname] => user2
+            [pass] => pass
+        )
+
+    [2] => JsonUser Object
+        (
+            [uname] => user3
+            [pass] => pass
+        )
+
+    [3] => JsonUser Object
+        (
+            [uname] => larry
+            [pass] => pass
+        )
+
+)
+Found 4 users in file: storage/credentials.jsonArray
+(
+    [0] => JsonUser Object
+        (
+            [uname] => user1
+            [pass] => pass
+        )
+
+    [1] => JsonUser Object
+        (
+            [uname] => user2
+            [pass] => pass
+        )
+
+    [2] => JsonUser Object
+        (
+            [uname] => user3
+            [pass] => pass
+        )
+
+    [3] => JsonUser Object
+        (
+            [uname] => larry
+            [pass] => pass
+        )
+
+)
+Found 4 users in file: storage/credentials.jsonArray
+(
+    [0] => JsonUser Object
+        (
+            [uname] => user1
+            [pass] => pass
+        )
+
+    [1] => JsonUser Object
+        (
+            [uname] => user2
+            [pass] => pass
+        )
+
+    [2] => JsonUser Object
+        (
+            [uname] => user3
+            [pass] => pass
+        )
+
+    [3] => JsonUser Object
+        (
+            [uname] => larry
+            [pass] => pass
+        )
+
+)
+Found 4 users in file: storage/credentials.jsonArray
+(
+    [0] => JsonUser Object
+        (
+            [uname] => user1
+            [pass] => pass
+        )
+
+    [1] => JsonUser Object
+        (
+            [uname] => user2
+            [pass] => pass
+        )
+
+    [2] => JsonUser Object
+        (
+            [uname] => user3
+            [pass] => pass
+        )
+
+    [3] => JsonUser Object
+        (
+            [uname] => larry
+            [pass] => pass
+        )
+
+)
+Found 4 users in file: storage/credentials.jsonArray
+(
+    [0] => JsonUser Object
+        (
+            [uname] => user1
+            [pass] => pass
+        )
+
+    [1] => JsonUser Object
+        (
+            [uname] => user2
+            [pass] => pass
+        )
+
+    [2] => JsonUser Object
+        (
+            [uname] => user3
+            [pass] => pass
+        )
+
+    [3] => JsonUser Object
+        (
+            [uname] => larry
+            [pass] => pass
+        )
+
+)
+Found 4 users in file: storage/credentials.jsonArray
+(
+    [0] => JsonUser Object
+        (
+            [uname] => user1
+            [pass] => pass
+        )
+
+    [1] => JsonUser Object
+        (
+            [uname] => user2
+            [pass] => pass
+        )
+
+    [2] => JsonUser Object
+        (
+            [uname] => user3
+            [pass] => pass
+        )
+
+    [3] => JsonUser Object
+        (
+            [uname] => larry
+            [pass] => pass
+        )
+
+)
+Found 4 users in file: storage/credentials.jsonArray
+(
+    [0] => JsonUser Object
+        (
+            [uname] => user1
+            [pass] => pass
+        )
+
+    [1] => JsonUser Object
+        (
+            [uname] => user2
+            [pass] => pass
+        )
+
+    [2] => JsonUser Object
+        (
+            [uname] => user3
+            [pass] => pass
+        )
+
+    [3] => JsonUser Object
+        (
+            [uname] => larry
+            [pass] => pass
+        )
+
+)
+Found 4 users in file: storage/credentials.jsonArray
+(
+    [0] => JsonUser Object
+        (
+            [uname] => user1
+            [pass] => pass
+        )
+
+    [1] => JsonUser Object
+        (
+            [uname] => user2
+            [pass] => pass
+        )
+
+    [2] => JsonUser Object
+        (
+            [uname] => user3
+            [pass] => pass
+        )
+
+    [3] => JsonUser Object
+        (
+            [uname] => larry
+            [pass] => pass
+        )
+
+)
+Found 4 users in file: storage/credentials.jsonArray
+(
+    [0] => JsonUser Object
+        (
+            [uname] => user1
+            [pass] => pass
+        )
+
+    [1] => JsonUser Object
+        (
+            [uname] => user2
+            [pass] => pass
+        )
+
+    [2] => JsonUser Object
+        (
+            [uname] => user3
+            [pass] => pass
+        )
+
+    [3] => JsonUser Object
+        (
+            [uname] => larry
+            [pass] => pass
+        )
+
+)
+Found 4 users in file: storage/credentials.jsonArray
+(
+    [0] => JsonUser Object
+        (
+            [uname] => user1
+            [pass] => pass
+        )
+
+    [1] => JsonUser Object
+        (
+            [uname] => user2
+            [pass] => pass
+        )
+
+    [2] => JsonUser Object
+        (
+            [uname] => user3
+            [pass] => pass
+        )
+
+    [3] => JsonUser Object
+        (
+            [uname] => larry
+            [pass] => pass
+        )
+
+)
+Found 4 users in file: storage/credentials.jsonArray
+(
+    [0] => JsonUser Object
+        (
+            [uname] => user1
+            [pass] => pass
+        )
+
+    [1] => JsonUser Object
+        (
+            [uname] => user2
+            [pass] => pass
+        )
+
+    [2] => JsonUser Object
+        (
+            [uname] => user3
+            [pass] => pass
+        )
+
+    [3] => JsonUser Object
+        (
+            [uname] => larry
+            [pass] => pass
+        )
+
+)
+Found 4 users in file: storage/credentials.jsonArray
+(
+    [0] => JsonUser Object
+        (
+            [uname] => user1
+            [pass] => pass
+        )
+
+    [1] => JsonUser Object
+        (
+            [uname] => user2
+            [pass] => pass
+        )
+
+    [2] => JsonUser Object
+        (
+            [uname] => user3
+            [pass] => pass
+        )
+
+    [3] => JsonUser Object
+        (
+            [uname] => larry
+            [pass] => pass
+        )
+
+)
+Found 4 users in file: storage/credentials.jsonArray
+(
+    [0] => JsonUser Object
+        (
+            [uname] => user1
+            [pass] => pass
+        )
+
+    [1] => JsonUser Object
+        (
+            [uname] => user2
+            [pass] => pass
+        )
+
+    [2] => JsonUser Object
+        (
+            [uname] => user3
+            [pass] => pass
+        )
+
+    [3] => JsonUser Object
+        (
+            [uname] => larry
+            [pass] => pass
+        )
+
+)
+Found 4 users in file: storage/credentials.jsonArray
+(
+    [0] => JsonUser Object
+        (
+            [uname] => user1
+            [pass] => pass
+        )
+
+    [1] => JsonUser Object
+        (
+            [uname] => user2
+            [pass] => pass
+        )
+
+    [2] => JsonUser Object
+        (
+            [uname] => user3
+            [pass] => pass
+        )
+
+    [3] => JsonUser Object
+        (
+            [uname] => larry
+            [pass] => pass
+        )
+
+)
+Found 4 users in file: storage/credentials.jsonArray
+(
+    [0] => JsonUser Object
+        (
+            [uname] => user1
+            [pass] => pass
+        )
+
+    [1] => JsonUser Object
+        (
+            [uname] => user2
+            [pass] => pass
+        )
+
+    [2] => JsonUser Object
+        (
+            [uname] => user3
+            [pass] => pass
+        )
+
+    [3] => JsonUser Object
+        (
+            [uname] => larry
+            [pass] => pass
+        )
+
+)
+Found 4 users in file: storage/credentials.jsonArray
+(
+    [0] => JsonUser Object
+        (
+            [uname] => user1
+            [pass] => pass
+        )
+
+    [1] => JsonUser Object
+        (
+            [uname] => user2
+            [pass] => pass
+        )
+
+    [2] => JsonUser Object
+        (
+            [uname] => user3
+            [pass] => pass
+        )
+
+    [3] => JsonUser Object
+        (
+            [uname] => larry
+            [pass] => pass
+        )
+
+)
+Found 4 users in file: storage/credentials.jsonArray
+(
+    [0] => JsonUser Object
+        (
+            [uname] => user1
+            [pass] => pass
+        )
+
+    [1] => JsonUser Object
+        (
+            [uname] => user2
+            [pass] => pass
+        )
+
+    [2] => JsonUser Object
+        (
+            [uname] => user3
+            [pass] => pass
+        )
+
+    [3] => JsonUser Object
+        (
+            [uname] => larry
+            [pass] => pass
+        )
+
+)
+Found 4 users in file: storage/credentials.jsonArray
+(
+    [0] => JsonUser Object
+        (
+            [uname] => user1
+            [pass] => pass
+        )
+
+    [1] => JsonUser Object
+        (
+            [uname] => user2
+            [pass] => pass
+        )
+
+    [2] => JsonUser Object
+        (
+            [uname] => user3
+            [pass] => pass
+        )
+
+    [3] => JsonUser Object
+        (
+            [uname] => larry
+            [pass] => pass
+        )
+
+)
+Found 4 users in file: storage/credentials.jsonArray
+(
+    [0] => JsonUser Object
+        (
+            [uname] => user1
+            [pass] => pass
+        )
+
+    [1] => JsonUser Object
+        (
+            [uname] => user2
+            [pass] => pass
+        )
+
+    [2] => JsonUser Object
+        (
+            [uname] => user3
+            [pass] => pass
+        )
+
+    [3] => JsonUser Object
+        (
+            [uname] => larry
+            [pass] => pass
+        )
+
+)
+Found 4 users in file: storage/credentials.jsonArray
+(
+    [0] => JsonUser Object
+        (
+            [uname] => user1
+            [pass] => pass
+        )
+
+    [1] => JsonUser Object
+        (
+            [uname] => user2
+            [pass] => pass
+        )
+
+    [2] => JsonUser Object
+        (
+            [uname] => user3
+            [pass] => pass
+        )
+
+    [3] => JsonUser Object
+        (
+            [uname] => larry
+            [pass] => pass
+        )
+
+)
+Found 4 users in file: storage/credentials.jsonArray
+(
+    [0] => JsonUser Object
+        (
+            [uname] => user1
+            [pass] => pass
+        )
+
+    [1] => JsonUser Object
+        (
+            [uname] => user2
+            [pass] => pass
+        )
+
+    [2] => JsonUser Object
+        (
+            [uname] => user3
+            [pass] => pass
+        )
+
+    [3] => JsonUser Object
+        (
+            [uname] => larry
+            [pass] => pass
+        )
+
+)
+Found 4 users in file: storage/credentials.jsonArray
+(
+    [0] => JsonUser Object
+        (
+            [uname] => user1
+            [pass] => pass
+        )
+
+    [1] => JsonUser Object
+        (
+            [uname] => user2
+            [pass] => pass
+        )
+
+    [2] => JsonUser Object
+        (
+            [uname] => user3
+            [pass] => pass
+        )
+
+    [3] => JsonUser Object
+        (
+            [uname] => larry
+            [pass] => pass
+        )
+
+)
+Found 4 users in file: storage/credentials.jsonArray
+(
+    [0] => JsonUser Object
+        (
+            [uname] => user1
+            [pass] => pass
+        )
+
+    [1] => JsonUser Object
+        (
+            [uname] => user2
+            [pass] => pass
+        )
+
+    [2] => JsonUser Object
+        (
+            [uname] => user3
+            [pass] => pass
+        )
+
+    [3] => JsonUser Object
+        (
+            [uname] => larry
+            [pass] => pass
+        )
+
+)
+Get users from json file.Found 4 users in file: storage/credentials.jsonArray
+(
+    [0] => JsonUser Object
+        (
+            [uname] => user1
+            [pass] => pass
+        )
+
+    [1] => JsonUser Object
+        (
+            [uname] => user2
+            [pass] => pass
+        )
+
+    [2] => JsonUser Object
+        (
+            [uname] => user3
+            [pass] => pass
+        )
+
+    [3] => JsonUser Object
+        (
+            [uname] => larry
+            [pass] => pass
+        )
+
+)
+Add users from json file to session.Added 4secure users to session.Getting users from json file.Found 4 users in file: storage/credentials.jsonAdding users from json file to session.Added 4secure users to session.Getting users from json file.Found 4 users in file: storage/credentials.json
+Adding users from json file to session.
+Added 4secure users to session.
+Getting users from json file.Found 4 users in file: storage/credentials.json
+Adding users from json file to session.
+Added 4secure users to session.
+Getting users from json file.
+Found 4 users in file: storage/credentials.json
+Adding users from json file to session.
+Added 4secure users to session.
+Getting users from json file.
+Found 4 users in file: storage/credentials.json
+Adding users from json file to session.
+Added 4secure users to session.
+Getting users from json file.
+Found 4 users in file: storage/credentials.json
+Adding users from json file to session.
+Added 4secure users to session.
+Getting users from json file.
+Found 4 users in file: storage/credentials.json
+Adding users from json file to session.
+Added 4secure users to session.
