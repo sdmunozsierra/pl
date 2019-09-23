@@ -3,7 +3,7 @@
 Price look-up codes made easy developed in PHP.
 
 ## Basic Functionality:
-* Provide an interface with a list and two input fields: "Name", "PLU" and Submit button.
+* [x] Provide an interface with a list and two input fields: "Name", "PLU" and Submit button.
 * Product Manager: Add items to list one by one to the list.
 * Alphabetical display of items in the list with their PLUs.
 
