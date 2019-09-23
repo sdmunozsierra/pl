@@ -17,44 +17,35 @@
 <?php
 require_once('products.php');
 
-$sample_product = new Product("bro", 120);
-$name = $sample_product->get_name();
-
 $products = new Product_DB();
 $products->load_product_csv_db('storage/products_database.csv');
-echo "products->db:<br>";
-echo $products->db;
 echo "<br>products->get_db:<br>";
 $db = $products->get_db();
 echo $db;
 
-echo $db[1]->name;
-echo "<br>foreach:<br>";
-foreach($db as $product){
-  echo $product->name;
-  echo $product->plu;
-}
+// echo $db[1]->name;
+// echo "<br>foreach:<br>";
+// foreach($db as $product){
+//   echo $product->name;
+//   echo $product->plu;
+// }
 
 // var_dump($products->db);
 echo "<br>ended<br>";
 
+// Create table
+echo "<table>";
+echo "<tr>";
+echo "<th>NAME</th>";
+echo "<th>PLU</th>";
+echo "</tr>";
+foreach ($db as $product){
+  echo "<tr>";
+  echo "<td>" . $product->name . "</td>";
+  echo "<td>" . $product->plu . "</td>";
+  echo "</tr>";
+}
+echo "</table>";
 ?>
-
-<!-- <?php if (count($products) > 0): ?>
-  <table>
-    <thead>
-      <tr>
-        <th><?php echo implode('</th><th>', array_keys(current($products->product_db))); ?></th>
-      </tr>
-    </thead>
-    <tbody>
-      <?php foreach ($products as $row): array_map('htmlentities', $row); ?>
-        <tr>
-          <td><?php echo implode('</td><td>', $row); ?></td>
-        </tr>
-      <?php endforeach; ?>
-    </tbody>
-  </table>
-<?php endif; ?> -->
 
 </html>

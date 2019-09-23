@@ -48,7 +48,6 @@ class Product_DB{
   function load_product_csv_db($csv_db_file){
     // Open the file for reading
     if (($fh = fopen($csv_db_file, "r")) !== FALSE){
-      echo 'file found!';
       $temp_arr = array();
       while (($data = fgetcsv($fh, 1000, ",")) !== FALSE){
         // TODO data[2] contains the link for the picture
@@ -57,10 +56,13 @@ class Product_DB{
       }
       $this->db = $temp_arr;
       fclose($fh);  // Close the file
+    }else{
+      echo 'file not found!';
     } //end open file
-    echo "<pre> Data in array";
-    var_dump($this->db);
-    echo "</pre>";
+    // Testing:
+    // echo "<pre> Data in array";
+    // var_dump($this->db);
+    // echo "</pre>";
     return $this->db;
   }
 
