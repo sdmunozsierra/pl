@@ -29,7 +29,9 @@ $secure_users = add_json_users_to_session($users);
 
 /* Get a user from session */
 function get_user_from_session($username){
-  print 'Searching for username: ' . $username . '</br>';
+  $message = 'Searching for username: ' . $username . ' in session.';
+  error_log($message . PHP_EOL, 3, 'error_log.txt');
+
   $session_users = unserialize($_SESSION['users']);
   foreach ($session_users as $user){
     $found = $user->get_user_from_username($username);
@@ -38,7 +40,8 @@ function get_user_from_session($username){
       continue;
     }
     // Found user
-    print 'Found user: ' . $found->username . '</br>';
+    $success_msg = 'Found user: ' . $found->username . ' in session.';
+    error_log($success_msg . PHP_EOL, 3, 'error_log.txt');
     return $found;
   }
   print 'User ' . $username . ' Not found';
