@@ -70,6 +70,27 @@ class Product_DB{
     return $this->db;
   }
 
+  function add_product($product){
+    // Takes in Product() object and adds it to the list
+    if($this->_check_product_in_db($product)){
+      // Product already in database
+      return False;
+    }else{
+      array_push($this->db, $product);
+      return True;
+    }
+  }
+
+  function _check_product_in_db($product){
+    // Check if product is in array
+    if (in_array($product, $this->db)){
+      echo 'Product already in the database.';
+      return True;
+    }
+    echo 'Product not in the database.';
+    return False;
+  }
+
 }
 
 // function write_product(){
