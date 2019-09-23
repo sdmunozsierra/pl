@@ -54,7 +54,15 @@ if(isset($_POST['product_name']) && isset($_POST['product_plu'])){
   }
 }
 
-function display_table($db){
+function display_table($db, $sorted=True){
+  // Sort Array if needed
+  if($sorted){
+    usort($db, function($a, $b)
+    {
+        return strcmp($a->name, $b->name);
+    });
+  }
+
   // Create table
   echo "<table>";
   echo "<tr>";
