@@ -4,11 +4,11 @@ Price look-up codes made easy developed in PHP.
 
 ## Basic Functionality:
 * [x] Provide an interface with a list and two input fields: "Name", "PLU" and Submit button.
-* Product Manager: Add items to list one by one to the list.
-* Alphabetical display of items in the list with their PLUs.
+* [x] Product Manager: Add items to list one by one to the list.
+* [x] Alphabetical display of items in the list with their PLUs.
 
 ## Features:
-* (10 pts) Basic Functionality
+* [x] (10 pts) Basic Functionality
 * (5 pts)  Use checkboxes to move items to the top of the list. Use Move to the list button.
 * (5 pts)  Add aliases to items. Show in light green. Only for items already in list.
 * (5 pts)  Add pictures to items.
