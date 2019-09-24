@@ -41,6 +41,7 @@ if(isset($_POST['product_name']) && isset($_POST['product_plu'])){
   $product = new Product($p_plu, $p_name);
   if($products->add_product($product)){
     echo "Product added to database.<br>";
+    $products->save_product_csv_db('storage/products_database.csv');
     display_table($products->db, $products->a_db);
   }else{
     echo "Product not added to database.<br>";

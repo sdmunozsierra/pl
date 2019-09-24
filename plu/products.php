@@ -2,57 +2,32 @@
 echo "Imported file 'products.php'<br>";
 /* Read and Write products to 'database'*/
 
+/* Product Object */
 class Product{
-  // Product Object
   public $plu;
   public $name;
-  // private $picture;  // To be implemented
+  public $picture = '';
 
   function __construct($p_plu, $p_name){
     $this->plu = $p_plu;
     $this->name = $p_name;
   }
-
-  function get_name(){
-    return $this->name;
-  }
 }
 
+/* Product DB */
 class Product_DB{
-  // public $db = array();
   public $db = array();
   public $a_db = array();
 
-  function load_product_json_db($json_db_file){
-    $file_exists = file_exists($json_db_file);
-    if ($file_exists){
-      // Decode json as object
-      $json = json_decode(file_get_contents($json_db_file));
-      // Create products array
-      // $products = array();
-      foreach ($json as $j_product){
-        $tmp_product = new Product($j_product->name, $j_product->plu);
-        array_push($this->product_db, $tmp_product);
-      }
-      $success_msg = 'Found ' . count($this->product_db) . ' products in file: ' . $json_db_file;
-      error_log($success_msg . PHP_EOL, 3, 'error_log.txt');
-      // error_log(print_r($users, true) . PHP_EOL, 3, 'error_log.txt');  //extra debug
-      return $this->product_db; // return users
-    }else{
-      $fail_msg = 'File not found! Coudn\'t get products from file.';
-      print $fail_msg . '</br>';
-      error_log($fail_msg . PHP_EOL, 3, 'error_log.txt');
-      return False;
-    }
-  } //End function
-
+  /* Reads the csv file database */
   function load_product_csv_db($csv_db_file){
-    // Open the file for reading
     if (($fh = fopen($csv_db_file, "r")) !== FALSE){
       $temp_arr = array();
       while (($data = fgetcsv($fh, 1000, ",")) !== FALSE){
-        // TODO data[2] contains the link for the picture
         $tmp_product = new Product($data[0], $data[1]);
+        if($data[2] !== ''){
+          $tmp_product->$data[2];
+        }
         array_push($temp_arr, $tmp_product);
       }
       $this->db = $temp_arr;
@@ -60,22 +35,29 @@ class Product_DB{
     }else{
       echo 'file not found!';
     } //end open file
-    // Testing:
-    // echo "<pre> Data in array";
-    // var_dump($this->db);
-    // echo "</pre>";
     return $this->db;
+  }
+
+  /* Saves (Updates) the csv file database */
+  function save_product_csv_db($csv_db_file){
+    echo '<pre>Saving file...</pre>';
+    $fp = fopen($csv_db_file, 'w');
+    foreach($this->db as $tmp){
+      $val = $tmp->plu . "," . $tmp->name . "," . $tmp->picture;
+      $val = explode(',', $val);
+      fputcsv($fp, $val);
+    }
+    fclose($fp);
   }
 
   function get_db(){
     return $this->db;
   }
 
+  /* Takes in Product() and adds it to the db */
   function add_product($product){
-    // Takes in Product() object and adds it to the list
     if($this->_check_product_in_db($product)){
-      // Product already in database
-      return False;
+      return False;  // Product already in database
     }else{
       array_push($this->db, $product);
       return True;
@@ -110,18 +92,6 @@ class Product_DB{
 
 }// End Class
 
-// function write_product(){
-//       $data = array ('aaa,bbb,ccc,dddd',
-//                    '123,456,789',
-//                    '"aaa","bbb"');
-//
-//     $fp = fopen('data.csv', 'w');
-//     foreach($data as $line){
-//              $val = explode(",",$line);
-//              fputcsv($fp, $val);
-//     }
-//     fclose($fp);
-// }
 
 function check_product_in_db($product, $product_db){
   // Check if product is in array
