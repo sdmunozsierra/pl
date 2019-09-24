@@ -19,20 +19,8 @@ require_once('products.php');
 
 $products = new Product_DB();
 $products->load_product_csv_db('storage/products_database.csv');
-echo "<br>products->get_db:<br>";
 
-// $db = $products->get_db();
-// echo $db;
-// echo $db[1]->name;
-// echo "<br>foreach:<br>";
-// foreach($db as $product)
-//   echo $product->name;
-//   echo $product->plu;
-
-// var_dump($products->db);
-echo "<br>ended<br>";
-
-display_table($products->db);
+display_table($products->db, $products->a_db);
 
 if(isset($_POST['product_name']) && isset($_POST['product_plu'])){
   // Clean input
@@ -43,18 +31,23 @@ if(isset($_POST['product_name']) && isset($_POST['product_plu'])){
   $p_name = htmlentities($p_name);
   $p_plu = htmlentities($p_plu);
 
+  // TEST ADD TO ALIASES
+  // $prod = $products->_get_product_by_plu(3000);
+  // echo "<br><br>got product" . $prod->name . "<br><br>";
+  $products->set_alias(3000, "ALIAS");
+
   // Add to list
   echo "Adding product to list" . $p_name . " " . $p_plu;
-  $product = new Product($p_name, $p_plu);
+  $product = new Product($p_plu, $p_name);
   if($products->add_product($product)){
     echo "Product added to database.<br>";
-    display_table($products->db);
+    display_table($products->db, $products->a_db);
   }else{
     echo "Product not added to database.<br>";
   }
 }
 
-function display_table($db, $sorted=True){
+function display_table($db, $a_db, $sorted=True){
   // Sort Array if needed
   if($sorted){
     usort($db, function($a, $b)
@@ -73,6 +66,12 @@ function display_table($db, $sorted=True){
     echo "<tr>";
     echo "<td>" . $product->name . "</td>";
     echo "<td>" . $product->plu . "</td>";
+    echo "</tr>";
+  }
+  foreach ($a_db as $product){
+    echo "<tr>";
+    echo "<td style=\"color:lime\">" . $product->name . "</td>";
+    echo "<td style=\"color:lime\">" . $product->plu . "</td>";
     echo "</tr>";
   }
   echo "</table>";

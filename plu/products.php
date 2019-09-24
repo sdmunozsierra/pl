@@ -4,8 +4,8 @@ echo "Imported file 'products.php'<br>";
 
 class Product{
   // Product Object
-  public $name;
   public $plu;
+  public $name;
   // private $picture;  // To be implemented
 
   function __construct($p_plu, $p_name){
@@ -21,6 +21,7 @@ class Product{
 class Product_DB{
   // public $db = array();
   public $db = array();
+  public $a_db = array();
 
   function load_product_json_db($json_db_file){
     $file_exists = file_exists($json_db_file);
@@ -82,7 +83,7 @@ class Product_DB{
   }
 
   function _check_product_in_db($product){
-    // Check if product is in array
+    // return True if product is in db
     if (in_array($product, $this->db)){
       echo 'Product already in the database.';
       return True;
@@ -91,7 +92,23 @@ class Product_DB{
     return False;
   }
 
-}
+  function _get_product_by_plu($plu){
+    foreach($this->db as $product){
+      if($product->plu == $plu){  // Found product
+        return $product;
+      }
+      return False;  // Product not in list
+    }
+  }
+
+  function set_alias($plu, $alias){
+    if($product = $this->_get_product_by_plu($plu)){
+      $tmp_product = new Product($product->plu, $alias);
+      array_push($this->a_db, $tmp_product);
+    }
+  }
+
+}// End Class
 
 // function write_product(){
 //       $data = array ('aaa,bbb,ccc,dddd',
