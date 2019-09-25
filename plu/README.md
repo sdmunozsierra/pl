@@ -29,7 +29,7 @@ Price look-up codes made easy developed in PHP.
 * Explanation on how to use them. Unless obvious.
 * Screenshots with all features.
 * Explanation of the code structure. UML or any diagram would help.
-* Code repo.
+* Code repository.
 * Example of unusual properties of variables in PHP caused problems.
 * Use HTML and CSS as pleased.
 
@@ -53,24 +53,26 @@ The prototype handles these extra features:
 ### Explanation on how to use them. Unless obvious.
 To move elements in the top of the list check the checkbox besides the PLU of the item. Then press the `Reorder List` button.
 
-To add an alias to an item enter the alias in the `Product Name` box and its correspondig PLU. Then press `Add Product` button. *NOTE:* If the PLU is not found in the database then the product will be added as a new product and not as an alias.
+To add an alias to an item enter the alias in the `Product Name` box and its corresponding PLU. Then press `Add Product` button. *NOTE:* If the PLU is not found in the database then the product will be added as a new product and not as an alias.
 
-To add a picture to an item press the `Browse` button and type its corresponfing PLU then press `Add Picture` button. If the PLU is not found in the database nothing will happen.
+To add a picture to an item press the `Browse` button and type its corresponding PLU then press `Add Picture` button. If the PLU is not found in the database nothing will happen.
+
+.csv files are read automatically in the storage directory.
 
 ### Screenshots with all features.
-Interface:
+* Interface:
 ![interface](report_files/screenshot-full-interface.png)
 
-Add Item:
+* Add Item:
 ![add_item](report_files/screenshot-add.png)
 
-Move to top of list:
+* Move to top of list:
 ![reorder](report_files/screenshot-reorder.png)
 
-Add Alias:
+* Add Alias:
 ![alias](report_files/screenshot-alias.png)
 
-Add Picture:
+* Add Picture:
 ![picture](report_files/screenshot-picture.png)
 
 ### Explanation of the code structure. UML or any diagram would help.
@@ -82,11 +84,11 @@ The structure of the code is divided into three main components.
 * `Storage` - This folder contains the .csv files used for storing the data. Contains the pictures to be displayed in the database table.
 
 Here is a diagram of the structure:
-![diagram](report_files/diagram.png)
+![diagram](report_files/diagram.jpg)
 
 ### Code repo.
 The code resides in:
 ```https://github.com/sdmunozsierra/pl/tree/master/plu```
 
 ### Example of unusual properties of variables in PHP caused problems.
-* Removing objects from an array was akward as the only way to "remove" them is by using unset(). So finding the element first and then doing the unset() fixes this problem.
+* Removing objects from an array was awkward as the only way to "remove" them is by using unset(). So finding the element first and then doing the unset() fixes this problem.
