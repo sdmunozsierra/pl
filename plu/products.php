@@ -19,6 +19,16 @@ class Product_DB{
   public $db = array();
   public $a_db = array();
 
+  function get_db(){
+    return $this->db;
+  }
+
+  function remove_from_db($product){
+    $key = array_search($product, $this->db, True);
+    unset($this->db[$key]);
+  }
+
+
   /* Reads the csv file database */
   function load_product_csv_db($csv_db_file){
     if (($fh = fopen($csv_db_file, "r")) !== FALSE){
@@ -48,10 +58,6 @@ class Product_DB{
       fputcsv($fp, $val);
     }
     fclose($fp);
-  }
-
-  function get_db(){
-    return $this->db;
   }
 
   /* Takes in Product() and adds it to the db */
@@ -157,6 +163,24 @@ function post_add_picture_to_product($products_db){
         $products_db->save_product_csv_db('storage/products_database.csv');
       }
     }
+  }
+}
+
+/* Reorders the database according to the checklists */
+function post_reorder_list($products_db){
+  if(isset($_POST['reorder'])){
+    foreach ($_POST['checkbox'] as $plu){
+      $plu = str_replace('/','',$plu);
+      $product = $products_db->_get_product_by_plu($plu);
+      if ($product == False){
+        echo "ERROR: Cannot reorder list with given plu";
+        return False;
+      }
+      // unset($products_db->db[$product]);
+      $products_db->remove_from_db($product);
+      array_unshift($products_db->db, $product);
+    }
+    return True;
   }
 }
 

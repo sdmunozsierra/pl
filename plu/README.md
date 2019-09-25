@@ -9,7 +9,7 @@ Price look-up codes made easy developed in PHP.
 
 ## Features
 * [x] (10 pts) Basic Functionality
-* (5 pts)  Use checkboxes to move items to the top of the list. Use Move to the list button.
+* [x] (5 pts)  Use checkboxes to move items to the top of the list. Use Move to the list button.
 * [x] (5 pts)  Add aliases to items. Show in light green. Only for items already in list.
 * [x] (5 pts)  Add pictures to items.
 * (5 pts)  Show items only in store. Determined by past invoices and items with no more than  2 weeks.

@@ -44,13 +44,16 @@ if($post_product){
 # POST add picture
 post_add_picture_to_product($products);
 
+# POST checkbox
+$reordered = post_reorder_list($products);
+
 # Test alias automatic
 $products->set_alias(3000, "ALIAS");
 
 # Display table
 display_table($products->db, $products->a_db);
 
-function display_table($db, $a_db, $sorted=True){
+function display_table($db, $a_db, $sorted=False){
   // Sort Array if needed
   if($sorted){
     usort($db, function($a, $b)
@@ -60,10 +63,12 @@ function display_table($db, $a_db, $sorted=True){
   }
 
   // Create table
+  echo "<form action='index.php' method='POST'>";
   echo "<table>";
-  echo "<tr>";
+  echo "<th></th>";
   echo "<th>NAME</th>";
   echo "<th>PLU</th>";
+  echo "<th></th>";
   echo "</tr>";
   foreach ($db as $product){
     echo "<tr>";
@@ -74,6 +79,9 @@ function display_table($db, $a_db, $sorted=True){
     }
     echo "<td>" . $product->name . "</td>";
     echo "<td>" . $product->plu . "</td>";
+
+    // Checkboxes
+    echo "<td><input type='checkbox' name='checkbox[]' value=" . $product->plu . "/></td>";
     echo "</tr>";
   }
   foreach ($a_db as $product){
@@ -88,6 +96,8 @@ function display_table($db, $a_db, $sorted=True){
     echo "</tr>";
   }
   echo "</table>";
+  echo "<input type='submit' name ='reorder' value='Reorder List'>";
+  echo "</form>";
 }
 
 ?>
