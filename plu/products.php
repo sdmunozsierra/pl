@@ -79,8 +79,8 @@ class Product_DB{
       if($product->plu == $plu){  // Found product
         return $product;
       }
-      return False;  // Product not in list
     }
+    return False;  // Product not in list
   }
 
   function set_alias($plu, $alias){
@@ -92,7 +92,6 @@ class Product_DB{
 
 }// End Class
 
-
 function check_product_in_db($product, $product_db){
   // Check if product is in array
   if (in_array($product, $product_db)){
@@ -101,6 +100,65 @@ function check_product_in_db($product, $product_db){
   }
   echo 'Product not in the database.';
   return False;
+}
+
+/* Return a product from POST */
+function post_add_product(){
+  if(isset($_POST['add_product'])){
+    if(isset($_POST['product_name']) && isset($_POST['product_plu'])){
+      // Clean input
+      $p_name = $_POST['product_name'];
+      $p_plu = $_POST['product_plu'];
+      $p_name = stripslashes($p_name);
+      $p_plu = stripslashes($p_plu);
+      $p_name = htmlentities($p_name);
+      $p_plu = htmlentities($p_plu);
+
+      echo "Adding product to list" . $p_name . " " . $p_plu;
+      $product = new Product($p_plu, $p_name);
+      return $product;
+    }else{
+      return Null;
+    }
+  } // End Add Product
+}
+
+function post_add_picture_to_product($products_db){
+  echo "<pre>" . $_FILES["picture"]["name"] . "</pre>";
+  if(isset($_POST['add_picture']) && isset($_POST['product_plu'])){
+    if (isset($_FILES["picture"]["name"])){
+      echo "<br>FILE DETECTED<br>";
+    }
+    if ($_FILES["picture"]["error"] > 0){
+      //bad file
+      echo "Error: " . $_FILES["picture"]["error"] . "<br>";
+    }else{
+      //good file
+      //get product by plu
+      $plu = $_POST['product_plu'];
+      echo "Looking for: " . $plu;
+      $product = $products_db->_get_product_by_plu($plu);
+      echo "Product found! ->" . $product->name;
+
+      if ($product == False){
+        echo "Cannot add picture to inexistent product.";
+      }else{
+        // Add picture to product
+        // $file_loc = $_POST['product_picture_file'];
+        $file_loc = "/storage/pictures/" . $product->plu . ".jpg";
+        $target = getcwd() . $file_loc;
+
+        // Place the file where it needs to be
+        move_uploaded_file($_FILES["picture"]["tmp_name"], $target);
+        $product->picture = $file_loc;
+
+        echo "Upload: " . $_FILES["picture"]["name"] . "<br>";
+        echo "Type: " . $_FILES["picture"]["type"] . "<br>";
+        echo "Size: " . ($_FILES["picture"]["size"] / 1024) . " kB<br>";
+        echo "Stored in: " . $_FILES["picture"]["tmp_name"];
+      }
+    }
+  }
 }
 
 ?>
