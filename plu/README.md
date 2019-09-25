@@ -59,7 +59,7 @@ To add a picture to an item press the `Browse` button and type its corresponfing
 
 ### Screenshots with all features.
 Interface:
-[screenshot-full-interface.png]
+[[/report_files/screenshot-full-interface.png]]
 
 Add Item:
 [screenshot2]
