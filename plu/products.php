@@ -1,6 +1,5 @@
 <?php
-echo "Imported file 'products.php'<br>";
-/* Read and Write products to 'database'*/
+/* Product Management File */
 
 /* Product Object */
 class Product{

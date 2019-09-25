@@ -11,9 +11,39 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <!-- Bulma Version 0.7.2-->
     <link rel="stylesheet" href="https://unpkg.com/bulma@0.7.4/css/bulma.min.css" />
-    <!-- <link rel="stylesheet" type="text/css" href="../css/blog.css"> -->
 </head>
 
+<style>
+.custom-bg-hero{
+  background-color: #05386B;
+}
+.custom-bg{
+  background-color: #EDF5E1;
+}
+
+.btn-2{
+  background-color: #05386B;
+  color: white;
+}
+</style>
+<!-- Title -->
+<section class="hero has-text-centered custom-bg-hero">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title" style="color:white">Albertsons PLU</h1>
+    </div>
+  </div>
+</section>
+
+
+<section class="section custom-bg">
+<div class="container">
+<div class="columns is-centered is-vcentered is-mobile">
+<div class="box">
+<div class="column is-narrow has-text-centered">
+<div class="container">
+<h2 class="title">Fruits in the Database</h2>
+</div>
 <?php
 require_once('products.php');
 
@@ -64,7 +94,7 @@ function display_table($db, $a_db, $sorted=False){
 
   // Create table
   echo "<form action='index.php' method='POST'>";
-  echo "<table>";
+  echo "<div class='table'><table>";
   echo "<th></th>";
   echo "<th>NAME</th>";
   echo "<th>PLU</th>";
@@ -73,7 +103,7 @@ function display_table($db, $a_db, $sorted=False){
   foreach ($db as $product){
     echo "<tr>";
     if ($product->picture !== ""){
-      echo "<td><img src='" . $product->picture . "' alt='' height=50 width=50></img></td>";
+      echo "<td><img src='" . $product->picture . "' alt='' height=40 width=40></img></td>";
     }else{
       echo "<td>";
     }
@@ -87,7 +117,7 @@ function display_table($db, $a_db, $sorted=False){
   foreach ($a_db as $product){
     echo "<tr>";
     if ($product->picture !== ""){
-      echo "<td><img src='" . $product->picture . "' alt='' height=50 width=50></img></td>";
+      echo "<td><img src='" . $product->picture . "' alt='' height=40 width=40></img></td>";
     }else{
       echo "<td>";
     }
@@ -95,33 +125,63 @@ function display_table($db, $a_db, $sorted=False){
     echo "<td style=\"color:lime\">" . $product->plu . "</td>";
     echo "</tr>";
   }
-  echo "</table>";
-  echo "<input type='submit' name ='reorder' value='Reorder List'>";
+  echo "</table></div>";
+  echo "<input class='button btn-2' type='submit' name ='reorder' value='Reorder List'>";
   echo "</form>";
 }
 
 ?>
+</div>
+</div>
+</div>
+</div>
+</section>
 
+<section class="section custom-bg">
+<div class="container">
+<div class="columns is-centered is-vcentered is-mobile">
+<div class="box">
+<div class="column is-narrow has-text-centered">
+<div class="container">
+<h2 class="title">Add Fruit</h2>
 <!-- Add Product Form -->
 <form action="index.php" method="POST">
-  Product name:
-  <input type="text" name="product_name" value="product_name">
+  <div class="label">Product name:</div>
+  <input class='input' type="text" name="product_name" value="Watermellon">
   <br>
-  Product plu:
-  <input type="text" name="product_plu" value="product_plu">
+  <div class="label">Product PLU:</div>
+  <input class='input' type="text" name="product_plu" value="5002">
   <br>
-  <input type="submit" name ="add_product" value="Add Product">
+  <br>
+  <input class="button btn-2" type="submit" name ="add_product" value="Add Product">
 </form>
+</div>
+</div>
+</div>
+</div>
+</section>
 
+<section class="section custom-bg">
+<div class="container">
+<div class="columns is-centered is-vcentered is-mobile">
+<div class="box">
+<div class="column is-narrow has-text-centered">
+<div class="container">
+<h2 class="title">Add Picture</h2>
 <!-- Add Picture Form -->
 <form action="index.php" method="POST" enctype="multipart/form-data">
-  Add picture to product PLU:
-  <input type="text" name="product_plu" value="3000">
+  <div class="label">Fruit PLU to add Picture:</div>
+  <input class='input' type="text" name="product_plu" value="3000">
   <br>
-  File location:
-  <input type="file" name="picture" id="picture"><br>
-  <br>
-  <input type="submit" name ="add_picture" value="Add Picture">
+  <div class="label">File Location:</div>
+  <input class='file' type="file" name="picture" id="picture"><br>
+  <input class='button btn-2' type="submit" name ="add_picture" value="Add Picture">
 </form>
+</div>
+</div>
+</div>
+</div>
+</section>
 
+</section>
 </html>
