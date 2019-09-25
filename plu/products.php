@@ -42,7 +42,7 @@ class Product_DB{
       $this->db = $temp_arr;
       fclose($fh);  // Close the file
     }else{
-      echo 'file not found!';
+      // echo 'file not found!';
     } //end open file
     return $this->db;
   }
@@ -72,10 +72,10 @@ class Product_DB{
   function _check_product_in_db($product){
     // return True if product is in db
     if (in_array($product, $this->db)){
-      echo 'Product already in the database.';
+      // echo 'Product already in the database.';
       return True;
     }
-    echo 'Product not in the database.';
+    // echo 'Product not in the database.';
     return False;
   }
 
@@ -107,10 +107,10 @@ class Product_DB{
 function check_product_in_db($product, $product_db){
   // Check if product is in array
   if (in_array($product, $product_db)){
-    echo 'Product already in the database.';
+    // echo 'Product already in the database.';
     return True;
   }
-  echo 'Product not in the database.';
+  // echo 'Product not in the database.';
   return False;
 }
 
@@ -126,7 +126,7 @@ function post_add_product(){
       $p_name = htmlentities($p_name);
       $p_plu = htmlentities($p_plu);
 
-      echo "Adding product to list" . $p_name . " " . $p_plu;
+      // echo "Adding product to list" . $p_name . " " . $p_plu;
       $product = new Product($p_plu, $p_name);
       return $product;
     }else{
@@ -141,13 +141,13 @@ function post_add_picture_to_product($products_db){
     }
     if ($_FILES["picture"]["error"] > 0){
       //bad file
-      echo "Error: " . $_FILES["picture"]["error"] . "<br>";
+      // echo "Error: " . $_FILES["picture"]["error"] . "<br>";
     }else{
       //good file
       // Find product
       $product = $products_db->_get_product_by_plu($_POST['product_plu']);
       if ($product == False){
-        echo "ERROR: Cannot add picture to inexistent product.";
+        // echo "ERROR: Cannot add picture to inexistent product.";
       }else{
         // Add picture to product
         // $file_loc = $_POST['product_picture_file'];
@@ -172,7 +172,7 @@ function post_reorder_list($products_db){
       $plu = str_replace('/','',$plu);
       $product = $products_db->_get_product_by_plu($plu);
       if ($product == False){
-        echo "ERROR: Cannot reorder list with given plu";
+        // echo "ERROR: Cannot reorder list with given plu";
         return False;
       }
       // unset($products_db->db[$product]);
@@ -181,6 +181,17 @@ function post_reorder_list($products_db){
     }
     return True;
   }
+}
+
+/* Print a nice error message */
+function print_message($message){
+  echo "<br>
+<article class='message is-danger'>
+  <div class='message-body'>"
+  . $message . "
+  </div>
+</article>";
+
 }
 
 ?>

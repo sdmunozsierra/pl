@@ -25,6 +25,7 @@
   background-color: #05386B;
   color: white;
 }
+
 </style>
 <!-- Title -->
 <section class="hero has-text-centered custom-bg-hero">
@@ -58,14 +59,14 @@ $post_product = post_add_product();
 if($post_product){
   # Check for product in database
   if($products->_get_product_by_plu($post_product->plu)){
-    echo "Product already exists. Not added to database.<br>";
-    echo "Adding as alias.<br>";
     if($products->set_alias($post_product->plu, $post_product->name) == False){
-      echo "ERROR: Alias already exists.<br>";
+      print_message("Updating alias to ". $post_product->name);
+    }else{
+      print_message("Adding alias to ". $post_product->name);
     }
   }else{
     if($products->add_product($post_product)){
-      echo "Product added to database.<br>";
+      print_message($post_product->name ." added to database.");
       $products->save_product_csv_db('storage/products_database.csv');
     }
   }
@@ -76,9 +77,6 @@ post_add_picture_to_product($products);
 
 # POST checkbox
 $reordered = post_reorder_list($products);
-
-# Test alias automatic
-$products->set_alias(3000, "ALIAS");
 
 # Display table
 display_table($products->db, $products->a_db);
@@ -147,7 +145,7 @@ function display_table($db, $a_db, $sorted=False){
 <!-- Add Product Form -->
 <form action="index.php" method="POST">
   <div class="label">Product name:</div>
-  <input class='input' type="text" name="product_name" value="Watermellon">
+  <input class='input' type="text" name="product_name" value="Watermelon">
   <br>
   <div class="label">Product PLU:</div>
   <input class='input' type="text" name="product_plu" value="5002">
