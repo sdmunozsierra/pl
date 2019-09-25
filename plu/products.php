@@ -26,7 +26,7 @@ class Product_DB{
       while (($data = fgetcsv($fh, 1000, ",")) !== FALSE){
         $tmp_product = new Product($data[0], $data[1]);
         if($data[2] !== ''){
-          $tmp_product->$data[2];
+          $tmp_product->picture = $data[2];
         }
         array_push($temp_arr, $tmp_product);
       }
@@ -40,7 +40,7 @@ class Product_DB{
 
   /* Saves (Updates) the csv file database */
   function save_product_csv_db($csv_db_file){
-    echo '<pre>Saving file...</pre>';
+    // echo '<pre>Saving file...</pre>';
     $fp = fopen($csv_db_file, 'w');
     foreach($this->db as $tmp){
       $val = $tmp->plu . "," . $tmp->name . "," . $tmp->picture;
@@ -86,6 +86,9 @@ class Product_DB{
   function set_alias($plu, $alias){
     if($product = $this->_get_product_by_plu($plu)){
       $tmp_product = new Product($product->plu, $alias);
+      if ($product-> picture !== ''){
+        $tmp_product->picture = $product->picture;
+      }
       array_push($this->a_db, $tmp_product);
     }
   }
@@ -124,24 +127,18 @@ function post_add_product(){
 }
 
 function post_add_picture_to_product($products_db){
-  echo "<pre>" . $_FILES["picture"]["name"] . "</pre>";
   if(isset($_POST['add_picture']) && isset($_POST['product_plu'])){
     if (isset($_FILES["picture"]["name"])){
-      echo "<br>FILE DETECTED<br>";
     }
     if ($_FILES["picture"]["error"] > 0){
       //bad file
       echo "Error: " . $_FILES["picture"]["error"] . "<br>";
     }else{
       //good file
-      //get product by plu
-      $plu = $_POST['product_plu'];
-      echo "Looking for: " . $plu;
-      $product = $products_db->_get_product_by_plu($plu);
-      echo "Product found! ->" . $product->name;
-
+      // Find product
+      $product = $products_db->_get_product_by_plu($_POST['product_plu']);
       if ($product == False){
-        echo "Cannot add picture to inexistent product.";
+        echo "ERROR: Cannot add picture to inexistent product.";
       }else{
         // Add picture to product
         // $file_loc = $_POST['product_picture_file'];
@@ -152,10 +149,8 @@ function post_add_picture_to_product($products_db){
         move_uploaded_file($_FILES["picture"]["tmp_name"], $target);
         $product->picture = $file_loc;
 
-        echo "Upload: " . $_FILES["picture"]["name"] . "<br>";
-        echo "Type: " . $_FILES["picture"]["type"] . "<br>";
-        echo "Size: " . ($_FILES["picture"]["size"] / 1024) . " kB<br>";
-        echo "Stored in: " . $_FILES["picture"]["tmp_name"];
+        // Save picture location to db
+        $products_db->save_product_csv_db('storage/products_database.csv');
       }
     }
   }

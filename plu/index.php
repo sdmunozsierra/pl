@@ -37,12 +37,11 @@ if($post_product){
 # POST add picture
 post_add_picture_to_product($products);
 
-# Display table
-display_table($products->db, $products->a_db);
-
 # Test alias automatic
 $products->set_alias(3000, "ALIAS");
 
+# Display table
+display_table($products->db, $products->a_db);
 
 function display_table($db, $a_db, $sorted=True){
   // Sort Array if needed
@@ -61,20 +60,20 @@ function display_table($db, $a_db, $sorted=True){
   echo "</tr>";
   foreach ($db as $product){
     echo "<tr>";
+    if ($product->picture !== ""){
+      echo "<td><img src='" . $product->picture . "' alt='' height=50 width=50></img></td>";
+    }
     echo "<td>" . $product->name . "</td>";
     echo "<td>" . $product->plu . "</td>";
-    if ($product->picture !== ""){
-      echo "<td><img src='" . $product->picture . "' alt='' border=3 height=100 width=100></img></td>";
-    }
     echo "</tr>";
   }
   foreach ($a_db as $product){
     echo "<tr>";
+    if ($product->picture !== ""){
+      echo "<td><img src='" . $product->picture . "' alt='' height=50 width=50></img></td>";
+    }
     echo "<td style=\"color:lime\">" . $product->name . "</td>";
     echo "<td style=\"color:lime\">" . $product->plu . "</td>";
-    // if ($product->picture !== ""){
-    //   echo "<td><img src='" . $product->picture . "' alt='' border=3 height=100 width=100></img></td>";
-    // }
     echo "</tr>";
   }
   echo "</table>";
@@ -89,7 +88,7 @@ function display_table($db, $a_db, $sorted=True){
   <br>
   Product plu:
   <input type="text" name="product_plu" value="product_plu">
-  <br><br>
+  <br>
   <input type="submit" name ="add_product" value="Add Product">
 </form>
 
@@ -100,11 +99,8 @@ function display_table($db, $a_db, $sorted=True){
   <br>
   File location:
   <input type="file" name="picture" id="picture"><br>
+  <br>
   <input type="submit" name ="add_picture" value="Add Picture">
-</form>
-
-<!-- <form action="upload_file.php" method="post"
-enctype="multipart/form-data"> -->
 </form>
 
 </html>
