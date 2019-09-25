@@ -62,16 +62,16 @@ Interface:
 ![interface](report_files/screenshot-full-interface.png)
 
 Add Item:
-[screenshot2]
+![add_item](report_files/screenshot-add.png)
 
 Move to top of list:
-[screenshot3]
+![reorder](report_files/screenshot-reorder.png)
 
 Add Alias:
-[screenshot4]
+![alias](report_files/screenshot-alias.png)
 
 Add Picture:
-[screenshot5]
+![picture](report_files/screenshot-picture.png)
 
 ### Explanation of the code structure. UML or any diagram would help.
 The structure of the code is divided into three main components.
@@ -82,7 +82,7 @@ The structure of the code is divided into three main components.
 * `Storage` - This folder contains the .csv files used for storing the data. Contains the pictures to be displayed in the database table.
 
 Here is a diagram of the structure:
-[diagram]
+![diagram](report_files/diagram.png)
 
 ### Code repo.
 The code resides in:
