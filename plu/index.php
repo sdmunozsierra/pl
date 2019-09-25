@@ -26,11 +26,18 @@ $post_product = post_add_product();
 
 # POST add product
 if($post_product){
-  if($products->add_product($post_product)){
-    echo "Product added to database.<br>";
-    $products->save_product_csv_db('storage/products_database.csv');
+  # Check for product in database
+  if($products->_get_product_by_plu($post_product->plu)){
+    echo "Product already exists. Not added to database.<br>";
+    echo "Adding as alias.<br>";
+    if($products->set_alias($post_product->plu, $post_product->name) == False){
+      echo "ERROR: Alias already exists.<br>";
+    }
   }else{
-    echo "Product not added to database.<br>";
+    if($products->add_product($post_product)){
+      echo "Product added to database.<br>";
+      $products->save_product_csv_db('storage/products_database.csv');
+    }
   }
 }
 
@@ -62,6 +69,8 @@ function display_table($db, $a_db, $sorted=True){
     echo "<tr>";
     if ($product->picture !== ""){
       echo "<td><img src='" . $product->picture . "' alt='' height=50 width=50></img></td>";
+    }else{
+      echo "<td>";
     }
     echo "<td>" . $product->name . "</td>";
     echo "<td>" . $product->plu . "</td>";
@@ -71,6 +80,8 @@ function display_table($db, $a_db, $sorted=True){
     echo "<tr>";
     if ($product->picture !== ""){
       echo "<td><img src='" . $product->picture . "' alt='' height=50 width=50></img></td>";
+    }else{
+      echo "<td>";
     }
     echo "<td style=\"color:lime\">" . $product->name . "</td>";
     echo "<td style=\"color:lime\">" . $product->plu . "</td>";

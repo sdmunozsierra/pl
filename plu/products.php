@@ -86,6 +86,10 @@ class Product_DB{
   function set_alias($plu, $alias){
     if($product = $this->_get_product_by_plu($plu)){
       $tmp_product = new Product($product->plu, $alias);
+      // Check for alias already in place
+      if ($product->name == $tmp_product->name){
+        return False;
+      }
       if ($product-> picture !== ''){
         $tmp_product->picture = $product->picture;
       }
