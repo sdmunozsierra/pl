@@ -13,7 +13,7 @@ awk 'FNR==NR { a[$1] = $2; next } $1 in a {print a[$1]}' codebook.txt -
 ```
 
 ## Using a bash script
-run as `./decode.sh`
+run as `./decode.sh fishlist.txt codebook.txt`
 
 ```bash
 #!/usr/bin/bash
