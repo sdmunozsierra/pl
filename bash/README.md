@@ -6,8 +6,7 @@ The file codebook.txt contains the mapping for the coded message.
 Each command is piped from each other to avoid writting to a file.
 
 ```bash
-awk -F: 'BEGIN {FS=" "} {if(length($1) == 4) print $2}' fishlist.txt |
-sort -n |
+awk -F: 'BEGIN {FS=" "} {if(length($1) == 4) print $2|"sort -n"}' fishlist.txt |
 awk -F '-' '{if($0%2) printf ("%c\n", $2+3)}' |
 awk 'FNR==NR { a[$1] = $2; next } $1 in a {print a[$1]}' codebook.txt -
 ```
@@ -17,11 +16,10 @@ run as `./decode.sh fishlist.txt codebook.txt`
 
 ```bash
 #!/usr/bin/bash
-awk -F: 'BEGIN {FS=" "} {if(length($1) == 4) print $2}' fishlist.txt |
-sort -n |
+awk -F: 'BEGIN {FS=" "} {if(length($1) == 4) print $2|"sort -n"}' fishlist.txt |
 awk -F '-' '{if($0%2) printf ("%c\n", $2+3)}' |
 awk 'FNR==NR { a[$1] = $2; next } $1 in a {print a[$1]}' codebook.txt - |
-tr '\n' ' '  > solution.txt
+tr -d '\n' > solution.txt
 cat solution.txt
 ```
 
