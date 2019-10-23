@@ -37,6 +37,7 @@ Price look-up codes made easy developed in PHP.
 
 ### URL of the prototype
 The prototype is running on localhost in my laptop.
+Run as: `php -S localhost:8001 index.php`
 
 ### Description of the features of the prototype
 The prototype handles all the basic features:
